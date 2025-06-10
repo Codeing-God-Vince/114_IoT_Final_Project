@@ -1,0 +1,790 @@
+[
+    {
+        "id": "46c029c6838e3a85",
+        "type": "tab",
+        "label": "Project",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6390d7b510805819",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "58ae34ee367156bb",
+        "type": "Application",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "platform": "ca37302e116198fe",
+        "name1": "738166c9168681bc",
+        "pointOfAccess": "http://127.0.0.1:8080/~/in-cse/in-name/Application_Server",
+        "obixAnnounce": false,
+        "width": 0,
+        "options": [
+            {
+                "label": "role",
+                "value": "application_server"
+            }
+        ],
+        "cntInstance": "",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "6390d7b510805819"
+            ]
+        ]
+    },
+    {
+        "id": "fb28adfa5516a56b",
+        "type": "inject",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "58ae34ee367156bb"
+            ]
+        ]
+    },
+    {
+        "id": "a133c80358cca4d3",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5cc55455422f204f",
+        "type": "Application",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "platform": "ca37302e116198fe",
+        "name1": "f0c4a97508dcec5f",
+        "pointOfAccess": "http://127.0.0.1:8080/~/in-cse/in-name/Smart_Street_Lights",
+        "obixAnnounce": false,
+        "width": 0,
+        "options": [
+            {
+                "label": "role",
+                "value": "Smart_Street_Lights"
+            }
+        ],
+        "cntInstance": "",
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "a133c80358cca4d3"
+            ]
+        ]
+    },
+    {
+        "id": "8682748a3762b765",
+        "type": "inject",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "5cc55455422f204f"
+            ]
+        ]
+    },
+    {
+        "id": "b118cd0580d60149",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "68294d19d8d8414b",
+        "type": "Container",
+        "z": "46c029c6838e3a85",
+        "name": "Lamp1",
+        "platform": "ca37302e116198fe",
+        "name1": "f0c4a97508dcec5f",
+        "viewtype": "autre",
+        "viewunid1": "Lamp1",
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "b118cd0580d60149"
+            ]
+        ]
+    },
+    {
+        "id": "632596eefb65df37",
+        "type": "inject",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "68294d19d8d8414b"
+            ]
+        ]
+    },
+    {
+        "id": "1d3d26414df65d7b",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a58c35bd9fd7912c",
+        "type": "Container",
+        "z": "46c029c6838e3a85",
+        "name": "Lamp2",
+        "platform": "ca37302e116198fe",
+        "name1": "f0c4a97508dcec5f",
+        "viewtype": "autre",
+        "viewunid1": "Lamp2",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "1d3d26414df65d7b"
+            ]
+        ]
+    },
+    {
+        "id": "1ef08923269468e3",
+        "type": "inject",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "a58c35bd9fd7912c"
+            ]
+        ]
+    },
+    {
+        "id": "4cf07c2319e363bc",
+        "type": "http response",
+        "z": "46c029c6838e3a85",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1000,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dab59b16b6c8d8fd",
+        "type": "http request",
+        "z": "46c029c6838e3a85",
+        "name": "post to lamp1",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Smart_Street_Lights/Lamp1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "5e0d294f2100ffeb",
+                "4cf07c2319e363bc"
+            ]
+        ]
+    },
+    {
+        "id": "c462a415e93af51a",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar instruction = '';\nif (parseInt(msg.payload.time) >= 6 && parseInt(msg.payload.time) < 17){\n\tinstruction = 'off';\n}\nelse{\n\tinstruction = 'on';\n}\n\n\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;instruction&quot; val=&quot;'+ instruction + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "dab59b16b6c8d8fd"
+            ]
+        ]
+    },
+    {
+        "id": "5e0d294f2100ffeb",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "msg status code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "9eedd2eec45f1e51",
+        "type": "http in",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "url": "/sensorData",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "c462a415e93af51a"
+            ]
+        ]
+    },
+    {
+        "id": "63746068125bea14",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "msg status code2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e6099edfe9de53eb",
+        "type": "http request",
+        "z": "46c029c6838e3a85",
+        "name": "post to lamp2",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Smart_Street_Lights/Lamp2",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "63746068125bea14",
+                "0c889f184cba3b1d"
+            ]
+        ]
+    },
+    {
+        "id": "e2f6a32400105327",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "set payload and headers",
+        "func": "/*jshint multistr: true */\nvar instruction = '';\nif (parseInt(msg.payload.time) >= 6 && parseInt(msg.payload.time) < 17){\n\tinstruction = 'off';\n}\nelse{\n\tinstruction = 'on';\n}\n\n\nvar data = '<m2m:cin xmlns:m2m=\"http://www.onem2m.org/xml/protocols\">\\\n\t<cnf>message</cnf>\\\n\t<con>\\\n\t  &lt;obj&gt;\\\n\t\t&lt;str name=&quot;instruction&quot; val=&quot;'+ instruction + '&quot;/&gt;\\\n\t  &lt;/obj&gt;\\\n\t</con>\\\n</m2m:cin>';\n\nmsg.payload = data;\nmsg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nmsg.headers['Content-Type'] = 'application/xml;ty=4';\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "e6099edfe9de53eb"
+            ]
+        ]
+    },
+    {
+        "id": "0c889f184cba3b1d",
+        "type": "http response",
+        "z": "46c029c6838e3a85",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1000,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9e10e313aa8ffb83",
+        "type": "http in",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "url": "/sensorData2",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "e2f6a32400105327"
+            ]
+        ]
+    },
+    {
+        "id": "7178b9b087abdd23",
+        "type": "http response",
+        "z": "46c029c6838e3a85",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1420,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8d915ef3f3e094f0",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 7",
+        "func": "msg.payload = \"{instruction:\" + msg.payload.obj.str[0].$.val+\"}\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 760,
+        "wires": [
+            [
+                "7178b9b087abdd23",
+                "ed037bacac796fc5"
+            ]
+        ]
+    },
+    {
+        "id": "396bfdcefcc53d78",
+        "type": "xml",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1090,
+        "y": 760,
+        "wires": [
+            [
+                "8d915ef3f3e094f0"
+            ]
+        ]
+    },
+    {
+        "id": "ed037bacac796fc5",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d72444b2ce95a75b",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 8",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 760,
+        "wires": [
+            [
+                "396bfdcefcc53d78"
+            ]
+        ]
+    },
+    {
+        "id": "1dd1047f2dc11212",
+        "type": "xml",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 770,
+        "y": 760,
+        "wires": [
+            [
+                "d72444b2ce95a75b"
+            ]
+        ]
+    },
+    {
+        "id": "25080c25354e820b",
+        "type": "http request",
+        "z": "46c029c6838e3a85",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Smart_Street_Lights/Lamp1/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 600,
+        "y": 760,
+        "wires": [
+            [
+                "1dd1047f2dc11212"
+            ]
+        ]
+    },
+    {
+        "id": "12fdf8e35f69e29d",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 9",
+        "func": "msg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 760,
+        "wires": [
+            [
+                "25080c25354e820b"
+            ]
+        ]
+    },
+    {
+        "id": "a1bfc6e24d4769b9",
+        "type": "http in",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "url": "/instruction",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 760,
+        "wires": [
+            [
+                "12fdf8e35f69e29d"
+            ]
+        ]
+    },
+    {
+        "id": "18f4f91e78cf5910",
+        "type": "debug",
+        "z": "46c029c6838e3a85",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "7d59e2ae667ab2fa",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 10",
+        "func": "msg.payload = \"{instruction:\" + msg.payload.obj.str[0].$.val+\"}\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 940,
+        "wires": [
+            [
+                "ee186b5b1fc20dbe",
+                "18f4f91e78cf5910"
+            ]
+        ]
+    },
+    {
+        "id": "c0ee0bb3aeaddf7d",
+        "type": "xml",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1090,
+        "y": 940,
+        "wires": [
+            [
+                "7d59e2ae667ab2fa"
+            ]
+        ]
+    },
+    {
+        "id": "ee186b5b1fc20dbe",
+        "type": "http response",
+        "z": "46c029c6838e3a85",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1420,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "d2cb9d6c719c0eb1",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 11",
+        "func": "msg.payload = msg.payload[\"m2m:cin\"].con[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 940,
+        "wires": [
+            [
+                "c0ee0bb3aeaddf7d"
+            ]
+        ]
+    },
+    {
+        "id": "d23fe4bd6449a6d7",
+        "type": "xml",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 770,
+        "y": 940,
+        "wires": [
+            [
+                "d2cb9d6c719c0eb1"
+            ]
+        ]
+    },
+    {
+        "id": "09d260255c8d0762",
+        "type": "http request",
+        "z": "46c029c6838e3a85",
+        "name": "get from in-cse",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8080/~/in-cse/in-name/Smart_Street_Lights/Lamp2/la",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 600,
+        "y": 940,
+        "wires": [
+            [
+                "d23fe4bd6449a6d7"
+            ]
+        ]
+    },
+    {
+        "id": "f8f00db9543c3f29",
+        "type": "function",
+        "z": "46c029c6838e3a85",
+        "name": "function 12",
+        "func": "msg.headers = {};\nmsg.headers['X-M2M-Origin'] = 'admin:admin';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 940,
+        "wires": [
+            [
+                "09d260255c8d0762"
+            ]
+        ]
+    },
+    {
+        "id": "47d64c92b762ef6b",
+        "type": "http in",
+        "z": "46c029c6838e3a85",
+        "name": "",
+        "url": "/instruction2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 940,
+        "wires": [
+            [
+                "f8f00db9543c3f29"
+            ]
+        ]
+    },
+    {
+        "id": "ca37302e116198fe",
+        "type": "xN_CSE",
+        "platform": "in-cse",
+        "URLBase": " http://127.0.0.1:8080/~/in-cse/in-name",
+        "user": "admin",
+        "password": "admin"
+    },
+    {
+        "id": "738166c9168681bc",
+        "type": "AE",
+        "appId": "Application_Server"
+    },
+    {
+        "id": "f0c4a97508dcec5f",
+        "type": "AE",
+        "appId": "Smart_Street_Lights"
+    }
+]
